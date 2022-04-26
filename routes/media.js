@@ -7,6 +7,19 @@ const fs = require("fs");
 const { Media } = require("../models");
 const { HOSTNAME } = process.env;
 
+router.get("/", async (req, res) => {
+  const media = await Media.findAll({
+    attribute: ["id", "image"],
+  });
+
+  const mappedMedia = media.map((m) => `${req.get("host")}/${m.image}`);
+
+  return res.json({
+    status: "success",
+    data: mappedMedia,
+  });
+});
+
 router.post("/", (req, res) => {
   const image = req.body.image;
 
@@ -27,7 +40,7 @@ router.post("/", (req, res) => {
       status: "success",
       data: {
         id: media.id,
-        image: `${HOSTNAME}/images/${filename}`,
+        image: `${req.get("host")}/images/${filename}`,
       },
     });
   });
