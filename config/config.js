@@ -8,17 +8,20 @@ module.exports = {
     password: DB_PASSWORD,
     database: DB_NAME,
     host: DB_HOSTNAME,
+    dialect: "mysql",
   },
   test: {
     username: DB_USERNAME,
     password: DB_PASSWORD,
     database: DB_NAME,
     host: DB_HOSTNAME,
+    dialect: "mysql",
   },
   production: {
     username: DB_USERNAME,
     password: DB_PASSWORD,
     database: DB_NAME,
     host: DB_HOSTNAME,
+    dialect: "mysql",
   },
 };
