@@ -4,7 +4,7 @@
 
 ![Architecture Microservices](https://res.cloudinary.com/dniq91ewn/image/upload/v1664261583/BWA%20Microservices/Group_10_oznnju.png)
 
-- This API is a service to handle user register, login, etc
+- This API is a service to handle and provide or store media data like course image, user image, etc.
 - Using ExpressJS Framework, Sequelize ORM, MySQL Database, and another package you can check in the package.json
 - You can use third party like S3, Google Cloud Storage, Digital Ocean Object Storage to store the media
 - API Documentation: https://documenter.getpostman.com/view/18696549/2s83f1Kbbi
